@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+/* heading and logo */
+#layout-div {
+  display: flex;
+  margin-top: 10rem;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 300;
+}
+
+.heading-box {
+  margin-left: 50px;
+}
+
+#logo {
+  width: 250px;
+  margin: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* input fields */
+
+.input {
+  display: block;
+  height: 50px;
+  width: 350px;
+  margin: auto;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 2px solid#333;
+  font-size: large;
+}
+
+.input:focus {
+  outline: none;
+}
+
+#email-login,
+#password-login,
+#username,
+#email-reg,
+#new-password,
+#confirm-password {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 300px;
+}
+
+input:focus + .login-label,
+input:valid + .login-label {
+  left: -150px;
+}
+
+input:focus + .reg-label,
+input:valid + .reg-label {
+  left: -140px;
+}
+
+/* forgot password */
+#forgot-pass {
+  display: inline-block;
+  position: relative;
+  left: 125px;
+}
+
+#forgot-pass::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.75px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: ease-in-out 0.5s;
+}
+
+#forgot-pass:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a {
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #1778f2;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1778f2;
+}
+
+/* login and reg containers */
+#login-box {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 400px;
+  min-width: 400px;
+  height: 380px;
+  padding: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  padding-top: 20px;
+}
+
+#login-fieldset {
+  border: none;
+}
+
+.label-mover {
+  position: relative;
+}
+
+.login-label,
+.reg-label {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  text-align: center;
+}
+
+.break {
+  color: lightgray;
+  width: 95%;
+  height: 0.1px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 50%;
+}
+
+#register-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 450px;
+  text-align: center;
+
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+#regBtnDiv {
+  text-align: center;
+}
+
+#register-fieldset {
+  border: none;
+}
+
+.reg-footer {
+  font-size: 10px;
+  opacity: 50%;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+/* other text  */
+#sign-up {
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 10px;
+  margin-left: -283px;
+}
+
+#sub-sign-up {
+  display: block;
+  float: left;
+  opacity: 50%;
+  padding-bottom: 20px;
+}
+
+#terms {
+  font-size: small;
+  opacity: 80%;
+}
+
+/* buttons */
+.btn {
+  height: 50px;
+  width: 350px;
+  font-size: larger;
+  font-weight: bold;
+  background-color: #1778f2;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+#newAccBtn {
+  background-color: limegreen;
+  font-size: medium;
+  width: 200px;
+}
+
+#register-button {
+  background-color: green;
+  font-size: medium;
+  height: 35px;
+  width: 175px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#close-reg {
+  position: absolute;
+  top: 0rem;
+  left: 25.5rem;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* icons */
+.icon-div {
+  position: absolute;
+}
+
+.show-pass,
+.hide-pass {
+  position: absolute;
+  cursor: pointer;
+  bottom: 23px;
+  left: 320px;
+  font-size: 24px;
+}
+
+.show-pass-reg,
+.hide-pass-reg {
+  position: absolute;
+  cursor: pointer;
+  bottom: 275px;
+  left: 361px;
+  font-size: 24px;
+}
+
+.mail-icon {
+  position: absolute;
+  bottom: 23px;
+  left: 320px;
+  font-size: 24px;
+}
+
+#mail-icon-reg {
+  position: absolute;
+  top: 223px;
+  right: 65px;
+  font-size: 24px;
+}
+
+#user {
+  position: absolute;
+  top: 155px;
+  right: 65px;
+  font-size: 24px;
+}
+
+/* register window hide and show*/
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/* media query */
+@media screen and (max-width: 900px) {
+  #layout-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  #login-box {
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  #text-layout-div {
+    margin: auto;
+    max-width: 450px;
+    min-width: 450px;
+  }
+}

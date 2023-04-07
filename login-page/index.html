@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+  </head>
+
+  <body>
+    <main>
+
+    <form id="login-form" autocomplete="off">
+      <div id="layout-div">
+
+        <div class="heading-box">
+          <img id="logo" src="logo.png" alt="company-logo" />
+          <div id="text-layout-div">
+          <h2 class="heading">
+            Generic Company ABC helps you do nothing, because it doesn't exist.
+          </h2>
+          </div>
+
+        </div>
+        
+        <div id="login-box">
+          <fieldset id="login-fieldset">
+
+            <div class="label-mover">
+                <input
+                class="input"
+                id="email-login"
+                name="email-login"
+                type="email"
+                oninvalid="this.setCustomValidity('Please Enter valid email with @ and .')"
+                oninput="setCustomValidity('')"
+                pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                required
+                />
+                <label class="login-label empty" id="email-login-empty">Email</label>
+            </div>
+
+            <div class="icon-div">
+            <ion-icon class="mail-icon"
+            name="mail-outline"></ion-icon>
+            </div>
+            
+            <div class="label-mover">
+                <input
+                class="input"
+                id="password-login"
+                type="password"
+                
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[.!@#$%^&*+`~'=?\|\]\[\(\)\-/]).{12,}"
+                required
+                />
+                <label class="login-label" id="password-login-label">Password</label>
+              </div>
+
+              <div class="icon-div">
+              <ion-icon name="lock-closed-outline" class="show-pass" ></ion-icon>
+
+              <ion-icon name="lock-open-outline" class="hide-pass hidden"></ion-icon>
+              </div>
+
+            <input type="submit" class="btn" id="login-button" value="Log in" />
+            <a href="https://media.istockphoto.com/id/151557041/photo/baby-crying.jpg?s=612x612&w=0&k=20&c=PR6N_B-8TRjeyBVPzud5Gw_sJZZlf3wOgtg_4-AmGbM=" id="forgot-pass">Forgotten password?</a>
+
+
+            <hr class="break"></hr>
+
+            <div id="regBtnDiv">
+            <button class="btn" id="newAccBtn">Create new account</button>
+            </div>
+
+          </fieldset>
+        </div>
+      </div>
+      </form>
+
+      <form id="reg-form" onSubmit="return checkerReg(this)">
+      <div id="register-box" class="hidden">
+        <p id="sign-up">Sign Up</p>
+        <p id="sub-sign-up">Its long and tedious.</p>
+        <hr class="break"></hr>
+        <fieldset id="register-fieldset">
+
+        <div class="label-mover">
+            <input
+            class="input"
+            id="username"
+            name="username"
+            type="text"
+           
+            required
+            />
+            <label class="reg-label">Username</label>
+        </div>
+          <ion-icon id="user" name="person-outline"></ion-icon>
+
+        <div class="label-mover">
+            <input
+            class="input"
+            id="email-reg"
+            name="email-reg"
+            type="email"
+            
+            oninvalid="this.setCustomValidity('Please Enter valid email with @ and .')"
+            oninput="setCustomValidity('')"
+            pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+            required
+            />
+            <label class="reg-label">Email</label>
+        </div>
+          <ion-icon id="mail-icon-reg"
+            name="mail-outline"></ion-icon>
+
+        <div class="label-mover">
+            <input
+            class="input"
+            id="new-password"
+            name="new-password"
+            type="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[.!@#$%^&*+`~'=?\|\]\[\(\)\-/]).{12,}"
+            
+            oninvalid="this.setCustomValidity('Please enter password with one Uppercase Letter, Lowercase Letter, Number, Special Character, and at least Twelve Characters')"
+            oninput="setCustomValidity('')"
+            required
+            />
+            <label class="reg-label">Password</label>
+        </div>
+          <ion-icon name="lock-closed-outline" class="show-pass-reg" ></ion-icon>
+          <ion-icon name="lock-open-outline" class="hide-pass-reg hidden"></ion-icon>
+
+        <div class="label-mover">
+            <input
+            class="input"
+            id="confirm-password"
+            name="confirm-password"
+            type="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[0-9])(?=.*?[.!@#$%^&*+`~'=?\|\]\[\(\)\-/]).{12,}"
+            
+            oninvalid="this.setCustomValidity('Please enter a matching password')"
+            oninput="setCustomValidity('')"
+            required
+          />
+          <label class="reg-label">Confirm Password</label>
+        </div>
+          
+          <label id="terms" >I agree to the terms and conditions!</label>
+          <input type="checkbox" 
+          required />
+
+          <input type="submit" class="btn" id="register-button" value="Sign Up" />
+
+
+        </fieldset>
+        <button id="close-reg">&times;</button>
+        <p class = "reg-footer">
+        People who use our service may have uploaded your contact information to Generic Company.
+        </p>
+            
+        <p class = "reg-footer">
+        By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.
+        </p>
+      </div>
+      </form>
+
+      <div class="overlay hidden"></div>
+    </main>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
